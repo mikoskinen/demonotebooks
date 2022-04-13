@@ -1,0 +1,33 @@
+#!csharp
+
+public string Hello {get;set;} = "hello param";
+public int Moi {get;set;}
+
+#!csharp
+
+var c = "hello there updated from";
+c
+
+
+#!csharp
+
+var x = new List<string>();
+x.Add("Hello");
+x.Add("Test");
+x.Add(c);
+x.Add(Hello);
+
+x
+
+#!csharp
+
+var jsonString = System.Text.Json.JsonSerializer.Serialize(new {
+    Name = "Hello",
+    Delicious = 9000,
+    Recipes = new object[] {
+        new   {Name = "hello", Time = "3 hours"},
+        new   {Name = "test", Time = "3 hours"},
+    }
+});
+
+System.Text.Json.JsonDocument.Parse(jsonString).RootElement.Display("text/html");
