@@ -5,7 +5,7 @@ public int Moi {get;set;}
 
 #!csharp
 
-var c = "another hello there updated from";
+var c = "another hello there updated from github demo";
 c
 
 
